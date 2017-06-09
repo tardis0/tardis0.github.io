@@ -3,14 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Rego Stickers</title>
+  <title>From JUnit 4 to JUnit 5 | Rego Stickers</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Rego Stickers">
-<meta property="og:url" content="http://tardis0.github.io/index.html">
+  <meta name="description" content="1. Add JUnit 5 APIAdding JUnit 5 support to your existing project that use JUnit 4 is very straightforward because JUnit 5 and JUnit 4 can co-exists in the same project. The first thing to do is to ad">
+<meta property="og:type" content="article">
+<meta property="og:title" content="From JUnit 4 to JUnit 5">
+<meta property="og:url" content="http://tardis0.github.io/2017/06/09/junit4-to-junit5/index.html">
 <meta property="og:site_name" content="Rego Stickers">
+<meta property="og:description" content="1. Add JUnit 5 APIAdding JUnit 5 support to your existing project that use JUnit 4 is very straightforward because JUnit 5 and JUnit 4 can co-exists in the same project. The first thing to do is to ad">
+<meta property="og:updated_time" content="2017-06-09T05:42:53.853Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Rego Stickers">
+<meta name="twitter:title" content="From JUnit 4 to JUnit 5">
+<meta name="twitter:description" content="1. Add JUnit 5 APIAdding JUnit 5 support to your existing project that use JUnit 4 is very straightforward because JUnit 5 and JUnit 4 can co-exists in the same project. The first thing to do is to ad">
   
     <link rel="alternate" href="/atom.xml" title="Rego Stickers" type="application/atom+xml">
   
@@ -59,126 +63,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-Meta-Post-Hexo" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/06/09/Meta-Post-Hexo/" class="article-date">
-  <time datetime="2017-06-09T05:57:27.000Z" itemprop="datePublished">2017-06-09</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/09/Meta-Post-Hexo/">Meta Post - Hexo</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Blogging-Software"><a href="#Blogging-Software" class="headerlink" title="Blogging Software"></a>Blogging Software</h2><p>Static site generator and writing content using Markdown are both compelling options. Jekyll is at the top of the list, but installing Ruby gave me a pause. </p>
-<p>Googling for “jekyll using nodejs” return a few options and one of them is Hexo.</p>
-<p>Going to <a href="hexo.io">hexo.io</a> to lookup how to install hexo and impressed with the simplicity.</p>
-<h3 id="Install-hexo"><a href="#Install-hexo" class="headerlink" title="Install hexo"></a>Install hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> /work-directory</div><div class="line">...</div><div class="line">$ npm install hexo-cli</div><div class="line">...</div><div class="line">``` </div><div class="line"></div><div class="line"><span class="comment">### Create the project</span></div><div class="line"></div><div class="line">```bash</div><div class="line">$ hexo init blog-directory</div><div class="line">...</div><div class="line">$ <span class="built_in">cd</span> blog-directory</div><div class="line">...</div><div class="line">$ npm install</div><div class="line">...</div><div class="line"><span class="comment"># update the config. Defaults are ok. The one that I change is the deployment directory.</span></div><div class="line"><span class="comment"># in your _config.yml, change the following to the directory that you will push to your website</span></div><div class="line"><span class="comment">#    public_dir: /blog/tardis0.github.io</span></div><div class="line"></div><div class="line">$ vim _config.yml</div><div class="line">...</div></pre></td></tr></table></figure>
-<h3 id="Add-a-blog-post"><a href="#Add-a-blog-post" class="headerlink" title="Add a blog post"></a>Add a blog post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My First Blog Post"</span></div><div class="line">INFO  Created:</div><div class="line">../<span class="built_in">source</span>/_posts/My-First-Blog-Post.md</div><div class="line"></div><div class="line"><span class="comment"># edit the content in text editor</span></div><div class="line">$ vim ../<span class="built_in">source</span>/_posts/My-First-Blog-Post.md</div><div class="line">...</div><div class="line">``` </div><div class="line"></div><div class="line"><span class="comment">### Generate the HTML, JS, CSS, etc</span></div><div class="line"></div><div class="line">```bash</div><div class="line">$ hexo generate --deploy</div></pre></td></tr></table></figure>
-<p>Once generated, ready to deploy to your website. Since it is all static files, no back end server configuration required.</p>
-<h2 id="Hosting"><a href="#Hosting" class="headerlink" title="Hosting"></a>Hosting</h2><p>…</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://tardis0.github.io/2017/06/09/Meta-Post-Hexo/" data-id="cj3pjokkc0002t8hb4xjosfyu" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-metapost-markdown" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/06/09/metapost-markdown/" class="article-date">
-  <time datetime="2017-06-09T04:12:13.000Z" itemprop="datePublished">2017-06-09</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/09/metapost-markdown/">Meta Post - Markdown</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Markdown-and-Markdown-Editor"><a href="#Markdown-and-Markdown-Editor" class="headerlink" title="Markdown and Markdown Editor"></a>Markdown and Markdown Editor</h2><p>The best reference for Markdown syntax that I found so far is <a href="https://en.support.wordpress.com/markdown-quick-reference/" target="_blank" rel="external">https://en.support.wordpress.com/markdown-quick-reference/</a></p>
-<p>The best editor is Visual Studio Code which have a built-in preview. Use <strong>Ctrl+K + V</strong> to show the Preview.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://tardis0.github.io/2017/06/09/metapost-markdown/" data-id="cj3pjokke0003t8hb30btpybp" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-second-article" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/06/09/second-article/" class="article-date">
-  <time datetime="2017-06-09T04:12:13.000Z" itemprop="datePublished">2017-06-09</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/09/second-article/">second article</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://tardis0.github.io/2017/06/09/second-article/" data-id="cj3pjokkf0004t8hbnp6dgbue" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-junit4-to-junit5" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-junit4-to-junit5" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/06/09/junit4-to-junit5/" class="article-date">
   <time datetime="2017-06-09T02:02:27.000Z" itemprop="datePublished">2017-06-09</time>
@@ -191,8 +76,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/09/junit4-to-junit5/">From JUnit 4 to JUnit 5</a>
+    <h1 class="article-title" itemprop="name">
+      From JUnit 4 to JUnit 5
     </h1>
   
 
@@ -225,55 +110,28 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/06/09/hello-world/" class="article-date">
-  <time datetime="2017-06-09T02:00:24.066Z" itemprop="datePublished">2017-06-09</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+    <a href="/2017/06/09/second-article/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
         
+          second article
+        
+      </div>
+    </a>
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/09/hello-world/">Hello World</a>
-    </h1>
   
+    <a href="/2017/06/09/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://tardis0.github.io/2017/06/09/hello-world/" data-id="cj3pjokk40000t8hbd238y0eq" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
 
 </section>
         
